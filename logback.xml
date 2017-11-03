@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <appender name="file" class="ch.qos.logback.core.FileAppender">
+        <file>easygoband.log</file>
+        <encoder>
+            <pattern>%date %-5level %logger - %message%n</pattern>
+        </encoder>
+    </appender>
+    
+    <root level="INFO">
+        <appender-ref ref="file"/>
+    </root>
+</configuration>
