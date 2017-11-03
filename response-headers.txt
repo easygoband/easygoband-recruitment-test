@@ -1,0 +1,16 @@
+HTTP/2 200 
+content-type: application/json; charset=utf-8
+content-length: 51161
+date: Thu, 02 Nov 2017 10:59:55 GMT
+x-amzn-requestid: f556e9d8-bfbc-11e7-abeb-d1d6d45be619
+access-control-allow-origin: *
+x-amzn-remapped-content-length: 51161
+x-amzn-remapped-connection: close
+etag: W/"c7d9-BDlVmRWhMFg79yI6tJ9+5iiHdPw"
+x-powered-by: Express
+x-amzn-trace-id: sampled=0;root=1-59fafaaa-df241938efbaf9a95b0f963e
+x-amzn-remapped-date: Thu, 02 Nov 2017 10:59:55 GMT
+x-cache: Miss from cloudfront
+via: 1.1 b24665a554e30571f85b913251577ced.cloudfront.net (CloudFront)
+x-amz-cf-id: 19CXF_ULMATZpU1qnJx02IOIBk_-vG6ArpK1e9L0_fmfrPlJZkq9Zw==
+
