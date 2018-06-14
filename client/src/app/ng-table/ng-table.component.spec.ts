@@ -1,12 +1,12 @@
-import { TestBed, async, ComponentFixture } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-import { MatCardModule, MatSelectModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
-import { NgTableComponent } from './ng-table/ng-table.component';
+import { fakeAsync, ComponentFixture, TestBed, async, tick } from '@angular/core/testing';
+
+import { NgTableComponent } from './ng-table.component';
+import { TicketService } from '../ticket.service';
+import { MatTableModule, MatPaginatorModule, MatSortModule, MatCardModule, MatSelectModule } from '@angular/material';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { TicketService } from './ticket.service';
-import { Ticket } from './ticket';
-import { of } from 'rxjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Ticket } from '../ticket';
+import { of } from 'rxjs';
 
 const EXAMPLE_DATA: Ticket[] = [
 	{
@@ -49,14 +49,14 @@ class TicketServiceStub extends TicketService {
 
 const ticketServiceStub = new TicketServiceStub(null);
 
-describe('AppComponent', () => {
-	let component: AppComponent;
-	let fixture: ComponentFixture<AppComponent>;
-	beforeEach(async(() => {
+describe('NgTableComponent', () => {
+	let component: NgTableComponent;
+	let fixture: ComponentFixture<NgTableComponent>;
+
+	beforeEach(fakeAsync(() => {
 		TestBed.configureTestingModule({
 			providers: [{ provide: TicketService, useValue: ticketServiceStub }],
 			declarations: [
-				AppComponent,
 				NgTableComponent
 			],
 			imports: [
@@ -66,18 +66,21 @@ describe('AppComponent', () => {
 				MatCardModule,
 				MatSelectModule,
 				HttpClientTestingModule,
-				BrowserAnimationsModule
+				BrowserAnimationsModule,
 			]
-		}).compileComponents();
+		})
+			.compileComponents();
 
-		fixture = TestBed.createComponent(AppComponent);
+		fixture = TestBed.createComponent(NgTableComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	}));
 
-	it('should create the app', async(() => {
-		const app = fixture.debugElement.componentInstance;
-		expect(app).toBeTruthy();
-	}));
+	it('should compile', () => {
+		expect(component).toBeTruthy();
+	});
 
+	it('should populate the table', () => {
+		expect(component.dataSource.data.length).toBe(2);
+	});
 });

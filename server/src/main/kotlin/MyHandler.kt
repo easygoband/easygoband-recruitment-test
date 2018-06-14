@@ -5,6 +5,8 @@ import ratpack.handling.Handler
 
 class MyHandler constructor(private val myService: MyService) : Handler {
     override fun handle(ctx: Context) {
-        ctx.response.send("service value: ${myService.getValue()}")
+        ctx.response.headers.add("Access-Control-Allow-Origin", "*")
+        ctx.response.headers.add("Content-Type", "application/json")
+        ctx.response.send("${myService.getValue()}")
     }
 }

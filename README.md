@@ -1,5 +1,6 @@
 # easyGOband Recruitment Test
 
+Ejecutar el servidor primero y después `cd client; npm install; ng serve --open`
 
 El test consiste de dos partes:
 

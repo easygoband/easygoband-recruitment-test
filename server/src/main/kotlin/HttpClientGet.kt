@@ -35,7 +35,7 @@ object HttpClient {
                 }
 
                 cache = response.toString()
-                return response.toString()
+                return cache as String
             }
         }
     }
