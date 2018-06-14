@@ -6,7 +6,7 @@ import java.util.*
 /**
  * Created by Albert Sendros on 30/5/18. Project -> test-easygoband Package utils
  */
-class APIReader {
+object APIReader {
     private var properties: Properties = Properties()
     private var propertiesFile = "${System.getProperty("user.dir")}/src/main/resources/APIOptions.properties"
 
