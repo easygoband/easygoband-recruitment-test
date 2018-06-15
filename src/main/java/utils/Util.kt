@@ -1,7 +1,11 @@
 package utils
 
 import java.io.FileInputStream
+import java.time.LocalDate
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 import java.util.*
+
 
 /**
  * Created by Albert Sendros on 30/5/18. Project -> test-easygoband Package utils
@@ -22,4 +26,10 @@ object APIReader {
     fun apiURL(): String {
         return properties.getProperty("apiurl")
     }
+}
+
+fun parseDateToEpoch(stringDate: String): Long {
+    val myDate = LocalDate.parse(stringDate.dropLast(5), DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+    val zoneId = ZoneId.of("Europe/Madrid") // or: ZoneId.of("Europe/Oslo");
+    return myDate.atStartOfDay(zoneId).toEpochSecond()
 }
