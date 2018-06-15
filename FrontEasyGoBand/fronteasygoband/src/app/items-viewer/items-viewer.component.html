@@ -1,0 +1,27 @@
+<div class="lds-facebook" *ngIf="isLoading">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<div *ngIf="dataList.length > 0">
+    <input type="text" name="search" placeholder="Buscar" #searchInput
+           (keyup)="filterElems(searchInput.value.toLocaleLowerCase())">
+  <strong class="styled-p">{{numMatches}} coincidencias</strong>
+  <div class="my-grid" id="myUL">
+    <div class="box" *ngFor="let elem of dataList">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <ngx-avatar mat-card-avatar name="{{elem.name.charAt(0)}}"></ngx-avatar>
+          <mat-card-title>Nombre: {{elem.name}}</mat-card-title>
+          <mat-card-subtitle>Modificado: {{elem.modified}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="../../assets/img/wall.jpg" height="300" width="200">
+        <mat-card-content>
+          <p *ngFor="let s of elem.sessions">
+            {{s.name}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

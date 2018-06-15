@@ -1,0 +1,67 @@
+.my-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-gap: 10px;
+}
+input[type=text] {
+  width: 33%;
+  border-radius: 25px;
+  font-size:18pt;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 100%;
+  font-size:18pt;
+}
+.box {
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+.styled-p {
+  color: #eeeeee;
+}
+
+/*Spinner*/
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 6px;
+  width: 13px;
+  background-color: darkorange;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 6px;
+  animation-delay: -0.24s;
+  color: aqua;
+}
+.lds-facebook div:nth-child(2) {
+  left: 26px;
+  animation-delay: -0.12s;
+  color: cornflowerblue;
+}
+.lds-facebook div:nth-child(3) {
+  left: 45px;
+  animation-delay: 0;
+  color: darkslateblue;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 6px;
+    height: 51px;
+  }
+  50%, 100% {
+    top: 19px;
+    height: 26px;
+  }
+}
