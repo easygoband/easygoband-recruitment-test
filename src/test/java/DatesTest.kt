@@ -10,7 +10,7 @@ class DatesTest : En {
     private var epochLong = 0L
 
     init {
-        Given("^a date (\\d+)-(\\d+)-(\\d+)T(\\d+):(\\d+):(\\d+)\\.(\\d+)Z$") { arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Int ->
+        Given("^a date (\\d+)-(\\d+)-(\\d+)T(\\d+):(\\d+):(\\d+)\\.(\\d+)Z$") { arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Int, _: Int ->
             var month = arg2.toString()
             if (arg2 < 10)
                 month = "0$arg2"
