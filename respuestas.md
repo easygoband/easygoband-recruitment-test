@@ -31,8 +31,8 @@ en caso de que alguna métrica supere algún threshold.
 	"edad": 21,
 	"lenguaje_programacion_favorito": "Go",
 	"ganas_de_trabajar": "enormes",
-	"experiencia": "0",
-	"estudios": ""
+	"experiencia": "0, solo proyectos personales",
+	"estudios": "Grado de Ingeniería Informática en la UJI"
 }
 #### Extra
 Al intentar utilizar TDD he tenido problemas porque he hecho uso de la librería Angular Material 
