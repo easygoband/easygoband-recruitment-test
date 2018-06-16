@@ -1,4 +1,4 @@
-import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { TestBed, ComponentFixture, fakeAsync } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { MatCardModule, MatSelectModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { NgTableComponent } from './ng-table/ng-table.component';
@@ -7,6 +7,8 @@ import { TicketService } from './ticket.service';
 import { Ticket } from './ticket';
 import { of } from 'rxjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { CdkTableModule } from '@angular/cdk/table';
 
 const EXAMPLE_DATA: Ticket[] = [
 	{
@@ -52,14 +54,16 @@ const ticketServiceStub = new TicketServiceStub(null);
 describe('AppComponent', () => {
 	let component: AppComponent;
 	let fixture: ComponentFixture<AppComponent>;
-	beforeEach(async(() => {
+	beforeEach(fakeAsync(() => {
 		TestBed.configureTestingModule({
 			providers: [{ provide: TicketService, useValue: ticketServiceStub }],
 			declarations: [
 				AppComponent,
-				NgTableComponent
+				NgTableComponent,
 			],
 			imports: [
+				CdkTableModule,
+				BrowserModule,
 				MatTableModule,
 				MatPaginatorModule,
 				MatSortModule,
@@ -75,9 +79,9 @@ describe('AppComponent', () => {
 		fixture.detectChanges();
 	}));
 
-	it('should create the app', async(() => {
+	it('should create the app', () => {
 		const app = fixture.debugElement.componentInstance;
 		expect(app).toBeTruthy();
-	}));
+	});
 
 });

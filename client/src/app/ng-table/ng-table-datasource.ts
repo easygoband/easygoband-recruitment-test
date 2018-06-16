@@ -19,7 +19,7 @@ export class NgTableDataSource extends DataSource<Ticket> {
 
 	constructor(private paginator: MatPaginator, private sort: MatSort, private ticketService: TicketService) {
 		super();
-		ticketService.fetch().toPromise().then(ticket => this.data = ticket);
+		ticketService.fetch().subscribe(res => { this.data = res; }, err => {});
 	}
 
 	/**

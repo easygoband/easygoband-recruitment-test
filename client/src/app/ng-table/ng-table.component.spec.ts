@@ -7,6 +7,8 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Ticket } from '../ticket';
 import { of } from 'rxjs';
+import { BrowserModule } from '@angular/platform-browser';
+import { CdkTableModule } from '@angular/cdk/table';
 
 const EXAMPLE_DATA: Ticket[] = [
 	{
@@ -57,9 +59,11 @@ describe('NgTableComponent', () => {
 		TestBed.configureTestingModule({
 			providers: [{ provide: TicketService, useValue: ticketServiceStub }],
 			declarations: [
-				NgTableComponent
+				NgTableComponent,
 			],
 			imports: [
+				CdkTableModule,
+				BrowserModule,
 				MatTableModule,
 				MatPaginatorModule,
 				MatSortModule,
@@ -82,5 +86,17 @@ describe('NgTableComponent', () => {
 
 	it('should populate the table', () => {
 		expect(component.dataSource.data.length).toBe(2);
+	});
+
+	it('should have ViewChild defined', () => {
+		expect(fixture.componentInstance.paginator).toBeDefined();
+		expect(fixture.componentInstance.sort).toBeDefined();
+	});
+
+	it('should display the tickets', () => {
+		fixture.detectChanges();
+		const el: HTMLElement = fixture.nativeElement;
+		const rows = el.querySelectorAll('mat-row');
+		expect(rows.length).toBe(2);
 	});
 });
