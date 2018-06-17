@@ -5,7 +5,7 @@
 			<span>
 				Filter: 
 			</span>
-			<app-filter [sessionNames]="sessionNames" (filter)="setFilter($event)"></app-filter>
+			<app-filter (filter)="setFilter($event)"></app-filter>
 		</mat-card-title>
 		<mat-card-content>
 			<app-ng-table [filter]="session"></app-ng-table>
