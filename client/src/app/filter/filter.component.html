@@ -1,0 +1,8 @@
+<mat-form-field>
+	<mat-select (selectionChange)="onSelect($event.value)" placeholder="Session name">
+		<mat-option>None</mat-option>
+		<mat-option *ngFor="let sessionName of sessionNames" [value]="sessionName">
+			{{sessionName}}
+		</mat-option>
+	</mat-select>
+</mat-form-field>

@@ -14,12 +14,14 @@ import { EventEmitter } from '@angular/core';
  */
 export class NgTableDataSource extends DataSource<Ticket> {
 	data: Ticket[] = [];
+	// used in the observable of the connect function for updating the view
 	filterEvent = new EventEmitter<string>(true);
+	// current session name filter
 	sessionFilter = '';
 
 	constructor(private paginator: MatPaginator, private sort: MatSort, private ticketService: TicketService) {
 		super();
-		ticketService.fetch().subscribe(res => { this.data = res; }, err => {});
+		ticketService.fetch().subscribe(res => { this.data = res; }, err => {console.log(err); });
 	}
 
 	/**

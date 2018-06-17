@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TicketService } from './ticket.service';
+import { Ticket } from './ticket';
 
 @Component({
 	selector: 'app-root',
@@ -8,31 +9,36 @@ import { TicketService } from './ticket.service';
 	providers: [TicketService]
 })
 export class AppComponent implements OnInit {
-	sessionNames = [];
-	session = '';
+	sessionNames: string[] = [];
+	session: string;
 
 	constructor(private ticketService: TicketService) {}
 
 	ngOnInit() {
+		// load the sessionNames from the ticketService
 		this.ticketService
 			.fetch()
-			.toPromise()
-			.then(tickets => this.sessionNames = this.uniq(tickets.map(ticket => ticket.sessions[0].name)));
+			.subscribe(tickets => {
+				this.sessionNames = this.getSessionNames(tickets); },
+				err => {console.log(err);
+			});
 	}
 
-	onSelect(sessionName: string) {
-		if (typeof sessionName === 'undefined') {
-			this.session = '';
-		} else {
-			this.session = sessionName;
+	setFilter(filter: string) {
+		// if the user clears the selection, filter will be undefined
+		// setting session to empty string means that we clear the filter
+		this.session = filter ? filter : '';
+	}
+
+	// get unique session names from tickets
+	private getSessionNames(tickets: Ticket[]) {
+		// Remove duplicated elements from a list of strings.
+		function unique(list) {
+			const seen = {};
+			return list.filter(function(item) {
+				return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+			});
 		}
-	}
-
-	// Remove duplicated elements from a list of strings.
-	private uniq(list) {
-		const seen = {};
-		return list.filter(function(item) {
-			return seen.hasOwnProperty(item) ? false : (seen[item] = true);
-		});
+		return unique(tickets.map(ticket => ticket.sessions[0].name));
 	}
 }

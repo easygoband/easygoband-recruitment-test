@@ -1,16 +1,15 @@
 #### ¿Has aplicado los principios SOLID?
 Sí, en el servidor se ha separado por servicio, handler y main. En el cliente se ha creado un componente
-para la tabla y se ha creado un servicio que se encarga de proporcionar la información del servidor al resto de componentes. 
-Posiblemente he fallado en SOLID a la hora de poner el <select> dentro del componente principal (debería haber creado un componente _filtro_) pero
-eso hubiese complicado más la interacción entre el filtro y la tabla. 
+para la tabla y filtro y se ha creado un servicio que se encarga de proporcionar la información del servidor al resto de componentes. 
 #### ¿Cuánto tiempo has estado pensando y escribiendo los tests del código? Si hubieras tenido mucho más tiempo... ¿que habrías añadido?
 1 semana.  Posiblemente habría hecho una gráficas para agrupar las sesiones y mostrar cuántas hay de cada una. 
 #### ¿Por qué motivo has elegido el lenguaje que has usado para este test?
-Me han obligado :( 
+Me han obligado :( Al ser el test para el proyecto de Kotlin y Angular de la empresa, se ha indicado utilizar estos lenguajes.
 #### ¿Cómo mejorarías la API que has usado?
 Si las sesiones siempre tienen tamaño 1, sería mejor que no fuesen un Array. 
 Parece que hay campos como structure_decode que siempre son false. ??
 A lo mejor vendría bien exponer un método HEAD que dijese que significa cada campo (posiblemente utilizando json-ld). 
+También implementar la posibilidad de filtrar y paginar por parte del servidor. Esto ya dependiendo del tamaño de los datos.
 #### ¿Qué framework y lenguaje crees que se ha usado para exponer esta API REST? Consejo: En el protocolo HTTP viaja mucha información
 Node.js/Express. Viene en la cabecera de X-powered-by.
 #### ¿Crees que esta API soporta peticiones CORS? ¿Cómo has llegado a esa conclusión?

@@ -9,6 +9,7 @@ import { of } from 'rxjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { CdkTableModule } from '@angular/cdk/table';
+import { FilterComponent } from './filter/filter.component';
 
 const EXAMPLE_DATA: Ticket[] = [
 	{
@@ -60,6 +61,7 @@ describe('AppComponent', () => {
 			declarations: [
 				AppComponent,
 				NgTableComponent,
+				FilterComponent
 			],
 			imports: [
 				CdkTableModule,

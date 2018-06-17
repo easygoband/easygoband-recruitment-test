@@ -1,21 +1,14 @@
 <div>
-    <mat-card>
-        <mat-card-title>
-            Tickets table
-            <span>
-				Filter:
+	<mat-card>
+		<mat-card-title>
+			Tickets table
+			<span>
+				Filter: 
 			</span>
-			<mat-form-field>
-				<mat-select (selectionChange)="onSelect($event.value)" placeholder="Session name">
-					<mat-option>None</mat-option>
-					<mat-option *ngFor="let sessionName of sessionNames" [value]="sessionName">
-						{{sessionName}}
-					</mat-option>
-				</mat-select>
-			</mat-form-field>            
-        </mat-card-title>
-        <mat-card-content>
-            <app-ng-table [filter]="session"></app-ng-table>
-        </mat-card-content>
-    </mat-card>
+			<app-filter [sessionNames]="sessionNames" (filter)="setFilter($event)"></app-filter>
+		</mat-card-title>
+		<mat-card-content>
+			<app-ng-table [filter]="session"></app-ng-table>
+		</mat-card-content>
+	</mat-card>
 </div>

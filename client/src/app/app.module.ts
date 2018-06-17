@@ -10,11 +10,13 @@ import { MatTableModule,
 	 MatSortModule,
 	 MatCardModule,
 	 MatSelectModule } from '@angular/material';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
 	AppComponent,
-	NgTableComponent
+	NgTableComponent,
+	FilterComponent
   ],
   imports: [
 	BrowserModule,
