@@ -1,0 +1,14 @@
+<div>
+	<mat-card>
+		<mat-card-title>
+			Tickets table
+			<span>
+				Filter: 
+			</span>
+			<app-filter (filter)="setFilter($event)"></app-filter>
+		</mat-card-title>
+		<mat-card-content>
+			<app-ng-table [filter]="session"></app-ng-table>
+		</mat-card-content>
+	</mat-card>
+</div>

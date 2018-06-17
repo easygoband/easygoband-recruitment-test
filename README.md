@@ -1,5 +1,24 @@
 # easyGOband Recruitment Test
 
+Ejecutar el servidor primero y después `cd client; npm install; ng serve --open` (requiere la versión del CLI de Angular 6.0.8, si falla algo es por eso)
+
+## Resumen
+
+Principalmente, se ha hecho uso de una nueva característica de Angular 6 que es el comando [ng add](https://blog.angular.io/version-6-of-angular-now-available-cc56b0efa7a4#d685) de su CLI. Esto permite añadir/instalar, por ejemplo, ng-bootstrap o @angular/material, además de permitir añadir
+ componentes de Angular Material 
+ ([Angular Material Starter Components](https://blog.angular.io/version-6-of-angular-now-available-cc56b0efa7a4#a93f)).
+
+Esto ha permitido añadir una tabla Angular Material con el comando `ng generate @angular/material:material-table --name=ng-table`. 
+
+Pero una de las desventajas de esto, es a la hora del testeo. He tenido problemas al intentar testear si los resultados se mostraban en el 
+DOM, si se conseguían filtrar... y no se si ha merecido la pena para este test utilizarlo.  
+Al final tan solo he conseguido testear si los datos del servidor se cargaban correctamente en el componente de la tabla y si se mostraban en el navegador, pero no testear el filtrado. Creo que el problema tiene que ver con que no se muy bien quien llama al método `connect` de NgTableDataSource y
+por lo tanto no tengo idea de como gestionar eso en el testeo. 
+
+El proyecto contiene el servidor/proxy que se ha realizado con Ratpack.
+El cliente consta del componente principal (App) que se encarga de instanciar la tabla y el filtro.
+
+## Test
 
 El test consiste de dos partes:
 
