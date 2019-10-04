@@ -27,7 +27,7 @@ const Container = styled.section`
 `;
 
 function App() {
-  const [data, loading] = useFetch(
+  const [data, loading, status] = useFetch(
     'https://pnny0h3cuf.execute-api.eu-west-1.amazonaws.com/dev/providers/1',
     'Basic cJmAc71jah17sgqi1jqaksvaksda='
   );
@@ -36,7 +36,13 @@ function App() {
     <>
       <GlobalStyle />
       <Container>
-        {loading ? <p>Loading...</p> : <Accesses data={data} />}
+        {loading ? (
+          <p>Loading...</p>
+        ) : status === 200 ? (
+          <Accesses data={data} />
+        ) : (
+          <p>Ooops.. something went wrong, please try again later</p>
+        )}
       </Container>
     </>
   );

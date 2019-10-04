@@ -51,7 +51,7 @@ const Search = styled.input`
 
 function Accesses(props) {
   const [searchTerm, setsearchTerm] = useState('');
-  console.log(props.data);
+
   return (
     <Table>
       <Search
