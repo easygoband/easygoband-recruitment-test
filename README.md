@@ -5,6 +5,12 @@ npm install
 npm start
 ```
 
+# Cargar test
+
+```
+npm test
+```
+
 # easyGOband Recruitment Test
 
 El test consiste de dos partes:

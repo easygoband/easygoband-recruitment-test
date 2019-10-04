@@ -2,6 +2,7 @@ import React from 'react';
 import useFetch from './hooks';
 import Accesses from './scenes/Accesses';
 import styled, { createGlobalStyle } from 'styled-components';
+import CONSTANTS from './constants';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -28,8 +29,8 @@ const Container = styled.section`
 
 function App() {
   const [data, loading, status] = useFetch(
-    'https://pnny0h3cuf.execute-api.eu-west-1.amazonaws.com/dev/providers/1',
-    'Basic cJmAc71jah17sgqi1jqaksvaksda='
+    CONSTANTS.API_URL,
+    CONSTANTS.API_AUTH
   );
 
   return (
