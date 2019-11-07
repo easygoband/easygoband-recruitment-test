@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h2>Providers</h2>
+
+        {{ sg_datatables_render(datatable) }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function() {
+            $('#sg-datatables-providers_datatable-head-filter-4 option:first-child').attr('disabled', true);
+        });
+    </script>
+{% endblock %}
