@@ -16,6 +16,7 @@ class GetData() {
     // Attributes
     private val nameList: MutableList<String> = mutableListOf()
     private val nameSet: MutableSet<String> = mutableSetOf()
+    private var jsonKeys: Set<String> = setOf()
     private val elements: MutableList<Element> = mutableListOf()
 
     // Methods
@@ -40,35 +41,28 @@ class GetData() {
 
     fun run(){
         val data = getURL(null)
+        val jsonData = data.getJSONObject(0)
+        jsonKeys = jsonData.keySet()
         for (item in data) {
             val jsonObject = JSONObject(item.toString())
             val sessionArray = JSONArray(jsonObject.get("sessions").toString())
             if (sessionArray.length() != 1)
                 throw Exception("UnsupportedSizeException") // cause: Array has got an unexpected length.
             val sessionItems = JSONObject(sessionArray[0].toString())
-            val sessionName = sessionItems.get("name").toString()
+            val sessionName = sessionItems.getString("name")
             nameList.add(sessionName)
             nameSet.add(sessionName)
-            val id: Int = jsonObject.get("id").toString().toInt()
-            val name: String = jsonObject.get("name").toString()
-            val accGroupName: String = jsonObject.get("access_group_name").toString()
-            val accGroupId: Int = jsonObject.get("access_group_id").toString().toInt()
-            val totalUses: Int = jsonObject.get("total_uses").toString().toInt()
-            val eventID: Int = jsonObject.get("event_id").toString().toInt()
-            val structureDecode: Boolean = jsonObject.get("structure_decode").toString().toLowerCase().toBoolean()
-            val modified: String = jsonObject.get("modified").toString()
-            val basicProductID: Int = jsonObject.get("basic_product_id").toString().toInt()
             val element = Element()
-            element.setID(id)
-            element.setName(name)
-            element.setModified(modified)
+            element.setID(jsonObject.getInt("id"))
+            element.setName(jsonObject.getString("name"))
+            element.setModified(jsonObject.getString("modified"))
             element.setSessionName(sessionName)
-            element.setAccessGroupID(accGroupId)
-            element.setAccessGroupName(accGroupName)
-            element.setTotalUses(totalUses)
-            element.setEventID(eventID)
-            element.setStructureDecode(structureDecode)
-            element.setBasicProductID(basicProductID)
+            element.setAccessGroupID(jsonObject.getInt("access_group_id"))
+            element.setAccessGroupName(jsonObject.getString("access_group_name"))
+            element.setTotalUses(jsonObject.getInt("total_uses"))
+            element.setEventID(jsonObject.getInt("event_id"))
+            element.setStructureDecode(jsonObject.getBoolean("structure_decode"))
+            element.setBasicProductID(jsonObject.getInt("basic_product_id"))
 
             elements.add(element)
         }
