@@ -10,7 +10,7 @@ class Element() {
     private var id: Int = 0
     private var name: String = ""
     private var modified: LocalDateTime = LocalDateTime.now()
-    private var sessionName: String = ""
+    private var sessions: MutableList<Session> = mutableListOf()
     private var accessGroupID: Int = 0
     private var accessGroupName: String = ""
     private var totalUses: Int = 0
@@ -30,8 +30,8 @@ class Element() {
         this.modified = LocalDateTime.parse(modified, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"))
     }
 
-    fun setSessionName(sessionName: String){
-        this.sessionName = sessionName
+    fun addSession(session: Session){
+        this.sessions.add(session)
     }
     fun setAccessGroupID(accessGroupID: Int) {
         this.accessGroupID = accessGroupID
@@ -61,8 +61,24 @@ class Element() {
         return name
     }
 
-    fun getSessionName(): String {
-        return sessionName
+    fun getSession(index: Int): Session {
+        return sessions.get(index)
+    }
+
+    fun getSessionNames(): String {
+        var sessionNames = ""
+        for (session in sessions)
+            sessionNames += session.getName() + ", "
+        sessionNames.replace(", ", "")
+        return sessionNames
+    }
+
+    fun getSessionName(sessionName: String): Boolean {
+        for (session in sessions) {
+            if (session.getName() == sessionName)
+                return true
+        }
+        return false
     }
 
     fun getModified(): String {

@@ -1,6 +1,5 @@
 import khttp.get
 import org.json.JSONArray
-import org.json.JSONObject
 
 class GetData() {
     // Variables to get data from known url.
@@ -16,7 +15,6 @@ class GetData() {
     // Attributes
     private val nameList: MutableList<String> = mutableListOf()
     private val nameSet: MutableSet<String> = mutableSetOf()
-    private var jsonKeys: Set<String> = setOf()
     private val elements: MutableList<Element> = mutableListOf()
 
     // Methods
@@ -41,37 +39,19 @@ class GetData() {
 
     fun run(){
         val data = getURL(null)
-        val jsonData = data.getJSONObject(0)
-        jsonKeys = jsonData.keySet()
-        for (item in data) {
-            val jsonObject = JSONObject(item.toString())
-            val sessionArray = JSONArray(jsonObject.get("sessions").toString())
-            if (sessionArray.length() != 1)
-                throw Exception("UnsupportedSizeException") // cause: Array has got an unexpected length.
-            val sessionItems = JSONObject(sessionArray[0].toString())
-            val sessionName = sessionItems.getString("name")
-            nameList.add(sessionName)
-            nameSet.add(sessionName)
-            val element = Element()
-            element.setID(jsonObject.getInt("id"))
-            element.setName(jsonObject.getString("name"))
-            element.setModified(jsonObject.getString("modified"))
-            element.setSessionName(sessionName)
-            element.setAccessGroupID(jsonObject.getInt("access_group_id"))
-            element.setAccessGroupName(jsonObject.getString("access_group_name"))
-            element.setTotalUses(jsonObject.getInt("total_uses"))
-            element.setEventID(jsonObject.getInt("event_id"))
-            element.setStructureDecode(jsonObject.getBoolean("structure_decode"))
-            element.setBasicProductID(jsonObject.getInt("basic_product_id"))
-
-            elements.add(element)
+        elements.addAll(ElementHandler(data).handle())
+        val list = ElementHandler(data)
+        list.check()
+        elements.forEach{
+            nameList.add(it.getSessionNames())
+            nameSet.add(it.getSessionNames())
         }
     }
 
     fun showDataFromSessionName(sessionName: String) {
         var shown = 0
         for (element in elements)
-            if (element.getSessionName() == sessionName) {
+            if (element.getSessionName(sessionName)) {
                 println("${++shown}.-")
                 element.show()
             }
