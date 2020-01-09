@@ -69,7 +69,7 @@ class Element() {
         var sessionNames = ""
         for (session in sessions)
             sessionNames += session.getName() + ", "
-        sessionNames.replace(", ", "")
+        sessionNames = sessionNames.trimEnd(' ', ',')
         return sessionNames
     }
 
