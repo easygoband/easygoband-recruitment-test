@@ -30,7 +30,7 @@ en base a los datos que devuelve el servidor, he usado los que obtiene la clase 
 
 #### ¿Por qué motivo has elegido el lenguaje que has usado para este test?
 Inicialmente hice un esbozo en Python, que es el lenguaje que más domino, aunque quise aprovechar la ocasión para experimentar
-con Kotlin que me pareció mucho más adecuado por la premisa de Google: "Android development will become increasingly Kotlin-first".
+con Kotlin que me pareció mucho más adecuado para los tiempos que corren por la premisa de Google: "Android development will become increasingly Kotlin-first".
 
 #### ¿Cómo mejorarías la API que has usado?
 Debería permitir filtros y paginación de los datos devueltos. Los filtros podrían ser tanto de un periodo comprendido 
