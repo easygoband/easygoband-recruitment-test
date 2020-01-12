@@ -3,7 +3,7 @@ Aclaraciones
 
 He elegido programar en Kotlin por utilizar el lenguaje que impera hoy en día para programar en Android. Aunque nunca 
 había programado antes en este lenguaje me ha servido para iniciarme en él y descubrir las diferencias con Java y sus
-bibliotecas.
+bibliotecas propias.
 
 Se compila y se ejecuta el módulo easyGObandRecruitmentTest.kt con una de las siguientes opciones:
  * --all (para listar todos los elementos recibidos)
