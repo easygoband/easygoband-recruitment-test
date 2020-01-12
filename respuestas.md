@@ -70,7 +70,7 @@ Sí, tanto en programas propios, como en tareas asignadas en mi empleo.
         {
             "nombre": "Grau en Enginyeria Informàtica",
             "inicio": "2016-09-12",
-            "fin": "2018-07-23"
+            "fin": "2018-07-23",
             "duración_años":  2,
             "acabados": false
         }
