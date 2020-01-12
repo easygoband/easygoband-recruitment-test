@@ -31,20 +31,20 @@ public class ElementHandler (private val jsonArray: JSONArray) {
             givenKeys.forEach {
                 when (it) {
                     null -> throw JSONException("Attribute was null")
-                    "id" -> element.setID(jsonObject.getInt("id"))
-                    "name" -> element.setName(jsonObject.getString("name"))
+                    "id" -> element.id = jsonObject.getInt("id")
+                    "name" -> element.name = jsonObject.getString("name")
                     "modified" -> element.setModified(jsonObject.getString("modified"))
-                    "access_group_id" -> element.setAccessGroupID(jsonObject.getInt("access_group_id"))
-                    "access_group_name" -> element.setAccessGroupName(jsonObject.getString("access_group_name"))
-                    "total_uses" -> element.setTotalUses(jsonObject.getInt("total_uses"))
-                    "event_id" -> element.setEventID(jsonObject.getInt("event_id"))
-                    "structure_decode" -> element.setStructureDecode(jsonObject.getBoolean("structure_decode"))
-                    "basic_product_id" -> element.setBasicProductID(jsonObject.getInt("basic_product_id"))
+                    "access_group_id" -> element.accessGroupID = jsonObject.getInt("access_group_id")
+                    "access_group_name" -> element.accessGroupName = jsonObject.getString("access_group_name")
+                    "total_uses" -> element.totalUses = jsonObject.getInt("total_uses")
+                    "event_id" -> element.eventID = jsonObject.getInt("event_id")
+                    "structure_decode" -> element.structureDecode = jsonObject.getBoolean("structure_decode")
+                    "basic_product_id" -> element.basicProductID = jsonObject.getInt("basic_product_id")
                     "sessions" -> jsonObject.getJSONArray("sessions").forEach{
                         val innerJsonObject: JSONObject = it as JSONObject
                         val session = Session()
-                        session.setID(innerJsonObject.getInt("id"))
-                        session.setName(innerJsonObject.getString("name"))
+                        session.id = innerJsonObject.getInt("id")
+                        session.name = innerJsonObject.getString("name")
                         element.addSession(session)
                     }
                     else -> throw JSONException("Attribute $it unknown.")

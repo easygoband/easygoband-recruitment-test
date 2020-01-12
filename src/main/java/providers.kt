@@ -19,6 +19,6 @@ class Providers() {
     }
 
     fun getApiKey(): String {
-        return properties.getProperty("apikey") + '='
+        return properties.getProperty("apikey").plus( '=')
     }
 }

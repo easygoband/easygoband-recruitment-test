@@ -13,7 +13,6 @@ class GetData() {
     )
 
     // Attributes
-    private val nameList: MutableList<String> = mutableListOf()
     private val nameSet: MutableSet<String> = mutableSetOf()
     private val elements: MutableList<Element> = mutableListOf()
 
@@ -34,7 +33,7 @@ class GetData() {
         }
         for (key in getNames())
             println(key)
-        println("\nThere are ${nameList.size} elements for ${nameSet.size} different session names.")
+        println("\nThere are ${elements.size} elements for ${nameSet.size} different session names.")
     }
 
     fun run(){
@@ -43,7 +42,6 @@ class GetData() {
         val list = ElementHandler(data)
         list.check()
         elements.forEach{
-            nameList.add(it.getSessionNames())
             nameSet.add(it.getSessionNames())
         }
     }
@@ -51,7 +49,7 @@ class GetData() {
     fun showDataFromSessionName(sessionName: String) {
         var shown = 0
         for (element in elements)
-            if (element.getSessionName(sessionName)) {
+            if (element.hasSessionName(sessionName)) {
                 println("${++shown}.-")
                 element.show()
             }
