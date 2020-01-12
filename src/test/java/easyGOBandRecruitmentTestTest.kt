@@ -2,7 +2,7 @@ import easyGOBand.Element
 import easyGOBand.GetData
 import org.junit.jupiter.api.Test as test
 import org.assertj.core.api.Assertions.assertThat
-
+import kotlin.test.assertTrue
 
 class EasyGOBandRecruitmentTestTest {
     @test
@@ -17,7 +17,7 @@ class EasyGOBandRecruitmentTestTest {
             "PREMIUM Abono", "PREMIUM Jueves", "PREMIUM Viernes", "PREMIUM Sábado",
             "BUS ABONO", "BUS JUEVES", "BUS VIERNES", "BUS SABADO"
         )
-
+        val regexp = Regex("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}")
         elements.forEach{
             assertThat(it.id).isBetween(1,999)
             assertThat(it.name).isNotEmpty()
@@ -28,6 +28,7 @@ class EasyGOBandRecruitmentTestTest {
             assertThat(it.structureDecode).isFalse()
             assertThat(it.totalUses).isEqualTo(0)
             assertThat(it.getSessionNames()).isEqualTo(it.getSessionNames().toUpperCase())
+            assertTrue(regexp.matches(it.getModified()))
         }
     }
 }

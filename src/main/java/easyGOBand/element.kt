@@ -24,7 +24,7 @@ class Element() {
         this.modified = LocalDateTime.parse(modified, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"))
     }
 
-    private fun getModified(): String {
+    fun getModified(): String {
         return modified.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
     }
 
