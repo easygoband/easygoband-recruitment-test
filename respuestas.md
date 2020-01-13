@@ -72,6 +72,7 @@ Sí, tanto en programas propios, como en tareas asignadas en mi empleo.
             "inicio": "2016-09-12",
             "fin": "2018-07-23",
             "duración_años":  2,
+            "cursos": [1, 2],
             "acabados": false
         }
     ],
@@ -84,7 +85,17 @@ Sí, tanto en programas propios, como en tareas asignadas en mi empleo.
             ],
             "inicio": "2018-10-01",
             "fin": "2019-04-31"
-        }
+        },
+        {
+            "empresa": "Amical Viquimèdia",
+            "cargo": "becario",
+            "descripción": [
+                "Python", "JavaScript", "despliegue de Moodle"
+            ],
+            "inicio": "2010-05-01",
+            "fin": "2010-10-31"
+        },
+            
     ],
     "conocimientos": {
       "lenguajes" : ["Java", "JavaScript", "Turbo Pascal", "PowerScript", "Python"],
