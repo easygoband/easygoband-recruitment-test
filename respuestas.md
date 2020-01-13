@@ -8,7 +8,7 @@ bibliotecas propias.
 Se compila y se ejecuta el módulo easyGObandRecruitmentTest.kt con una de las siguientes opciones:
  * --all (para listar todos los elementos recibidos)
  * --names (para listar los nombres de sesiones válidos)
- * --filter <sessionName>, donde <sessionName> es un valor de un nombre de sesión válido. De estar mal escrito el
+ * --filter \<sessionName\>, donde \<sessionName\> es un valor de un nombre de sesión válido. De estar mal escrito el
   programa indicará cuáles son los nombres de sesión válidos.
   
 Internamente el método  getURL() de la clase GetData puede parametrizarse indicando un valor diferente 
