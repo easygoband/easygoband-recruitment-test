@@ -13,7 +13,25 @@ Se compila y se ejecuta el módulo easyGObandRecruitmentTest.kt con una de las s
   
 Internamente el método  getURL() de la clase GetData puede parametrizarse indicando un valor diferente 
 al predeterminado. Aunque, evidentemente, no hay posibilidad de cambiar este valor pues como indica el enunciado el 
-valor debe ser 1. 
+valor debe ser 1.
+
+Compilación y ejecución
+-----------------------
+
+Siendo que lo he editado mediante InteliJ IDEA Ultimate para compilarlo uso las siguientes órdenes en el PowerShell:
+```
+$up= gc env:userprofile
+$classpath= "$up\IdeaProjects\EasyGoBand\target\classes;$up\.m2\repository\com\github\jkcclemens\khttp\-0.1.0-g130b89c-16\khttp--0.1.0-g130b89c-16.jar;$up\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;$up\.m2\repository\org\json\json\20150729\json-20150729.jar;$up\.m2\repository\org\jetbrains\spek\spek-api\1.1.0\spek-api-1.1.0.jar;$up\.m2\repository\org\jetbrains\spek\spek-junit-platform-engine\1.1.0\spek-junit-platform-engine-1.1.0.jar;$up\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk8\1.3.61\kotlin-stdlib-jdk8-1.3.61.jar;$up\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk7\1.3.61\kotlin-stdlib-jdk7-1.3.61.jar"
+
+kotlinc easyGOBandRecruitmentTest.kt -include-runtime -d easyGOBandRecruitmentTest.jar -cp $cp
+```
+
+Para ejecutarlo uso la orden con sus diferentes opciones:
+```
+kotlin -cp $classpath easygoband.EasyGOBandRecruitmentTestKt --all
+kotlin -cp $classpath easygoband.EasyGOBandRecruitmentTestKt --names
+kotlin -cp $classpath easygoband.EasyGOBandRecruitmentTestKt --filter 14-PARKING
+```
 
 Preguntas Técnicas
 ------------------
