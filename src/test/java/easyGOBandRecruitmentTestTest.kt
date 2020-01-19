@@ -1,5 +1,5 @@
-import easyGOBand.Element
-import easyGOBand.GetData
+import easygoband.Element
+import easygoband.GetData
 import org.junit.jupiter.api.Test as test
 import org.assertj.core.api.Assertions.assertThat
 import kotlin.test.assertTrue
