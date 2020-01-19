@@ -13,6 +13,9 @@ class GetData() {
         "content-type" to "application/json",
         "Authorization" to "Basic $APIkey"
     )
+    private var shown = 0
+    private var mistyping = 0
+    private var mistypingList = mutableListOf<String>()
 
     // Attributes
     private val nameSet: MutableSet<String> = mutableSetOf()
@@ -48,18 +51,32 @@ class GetData() {
         }
     }
 
-    fun showDataFromSessionName(sessionName: String) {
-        var shown = 0
-        for (element in elements)
-            if (element.hasSessionName(sessionName)) {
-                println("${++shown}.-")
-                element.show()
-            }
-
-        if (shown < 1) {
-            println("Session name must be one of the following names:")
-            showSessionNames()
+    fun showDataFromSessionName(sessionName: String){
+        if (!nameSet.contains(sessionName)) {
+            mistypingList.add(sessionName)
+        } else {
+            for (element in elements)
+                if (element.hasSessionName(sessionName)) {
+                    println("${++shown}.-")
+                    element.show()
+                }
         }
+    }
+
+    fun handleSessionNames(args: Array<String>){
+            if (args.size > 1) {
+                for (i in 1 until args.size) {
+                    showDataFromSessionName(args[i])
+                }
+                if (mistypingList.isNotEmpty()) {
+                    println("Unkown session names: ${mistypingList.joinToString(", ")}")
+                    println("Session name must be one of the following names:")
+                    showSessionNames()
+                }
+            } else {
+                println("A filter value is required, please choose one of this values:")
+                getNames().forEach{println(it)}
+            }
     }
 
     fun showData() {
@@ -75,20 +92,14 @@ fun main(args: Array<String>) {
     val data = GetData()
     data.run()
     val errMessage = "Please, choose one of the following options:\n\t--names\n\t--filter <session name>\n\t--all"
-    if (args.isNotEmpty())
+    if (args.isNotEmpty()) {
         when (args[0]) {
             "--all" -> data.showData()
-            "--filter" ->
-                    if (args.size == 2)
-                        data.showDataFromSessionName(args[1])
-                    else {
-                        println("filter value is required, please choose one of this values:")
-                        data.getNames().forEach{println(it)}
-                    }
+            "--filter" -> data.handleSessionNames(args)
             "--names" -> data.showSessionNames()
             else -> println(errMessage)
         }
-    else
+    } else
         println(errMessage)
 }
 
