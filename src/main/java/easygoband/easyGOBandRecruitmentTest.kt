@@ -75,10 +75,16 @@ fun main(args: Array<String>) {
     val data = GetData()
     data.run()
     val errMessage = "Please, choose one of the following options:\n\t--names\n\t--filter <session name>\n\t--all"
-    if (args.size > 0)
+    if (args.isNotEmpty())
         when (args[0]) {
             "--all" -> data.showData()
-            "--filter" -> data.showDataFromSessionName(args[1])
+            "--filter" ->
+                    if (args.size == 2)
+                        data.showDataFromSessionName(args[1])
+                    else {
+                        println("filter value is required, please choose one of this values:")
+                        data.getNames().forEach{println(it)}
+                    }
             "--names" -> data.showSessionNames()
             else -> println(errMessage)
         }
