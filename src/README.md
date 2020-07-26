@@ -86,6 +86,7 @@ Me tocó realizarlo en una aplicación móvil, y el inconveniente era que estáb
 
 ### Descríbete a ti mismo usando JSON.
 
+```json
 {
 "nombre": "Fernando",
 "apellido": "Haspert",
@@ -127,5 +128,6 @@ Me tocó realizarlo en una aplicación móvil, y el inconveniente era que estáb
 "frameworks": ["react", "Angular", "Srping", "Next.js", "Ionic"],
 "otros": ["SQL", "git", "HTML", "CSS", "SASS", "GULP", "Integración continua", "Metodologías ágiles", "Jenkins"]
 },
-hobbies: ["fútbol", "básquet", "música"]
+"hobbies": ["fútbol", "básquet", "música"]
 }
+```
