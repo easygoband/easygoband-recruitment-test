@@ -88,46 +88,56 @@ Me tocó realizarlo en una aplicación móvil, y el inconveniente era que estáb
 
 ```json
 {
-"nombre": "Fernando",
-"apellido": "Haspert",
-"email": "fhaspert08@gmail.com",
-"nacimiento": "14-10-1993"
-"estudios": [
-{
-"instituto": "IDET Instituto de educación técnica",
-"título": "Técnico en electromecánica",
-"inicio": 2006,
-"final": 2011,
-"estado": "finalizado"
-},
-{
-"instituto": "UTN - Universidad Tecnológica Nacional",
-"título": "Ingeniería en Sistemas de Información",
-"inicio": 2012,
-"estado": "en curso"
-},
-],
-"experiencia": [
-{
-"empresa": "Certant S.A",
-"cargo": "Desarrollador fullstack"
-"inicio": "02-05-2017",
-"fin": "27-12-2019",
-"area": "Bancos",
-},
-{
-"empresa": "Crowder",
-"cargo": "Desarrollador frontend"
-"inicio": "06-01-2019",
-"fin": "actual",
-"area": "Eventos",
-}
-],
-"habilidades": {
-"lenguajes": ["JAVA", "Javascript", "C"],
-"frameworks": ["react", "Angular", "Srping", "Next.js", "Ionic"],
-"otros": ["SQL", "git", "HTML", "CSS", "SASS", "GULP", "Integración continua", "Metodologías ágiles", "Jenkins"]
-},
-"hobbies": ["fútbol", "básquet", "música"]
+  "nombre": "Fernando",
+  "apellido": "Haspert",
+  "email": "fhaspert08@gmail.com",
+  "nacimiento": "14-10-1993",
+  "estudios": [
+    {
+      "instituto": "IDET Instituto de educación técnica",
+      "título": "Técnico en electromecánica",
+      "inicio": 2006,
+      "final": 2011,
+      "estado": "finalizado"
+    },
+    {
+      "instituto": "UTN - Universidad Tecnológica Nacional",
+      "título": "Ingeniería en Sistemas de Información",
+      "inicio": 2012,
+      "estado": "en curso"
+    }
+  ],
+  "experiencia": [
+    {
+      "empresa": "Certant S.A",
+      "cargo": "Desarrollador fullstack",
+      "inicio": "02-05-2017",
+      "fin": "27-12-2019",
+      "area": "Bancos"
+    },
+    {
+      "empresa": "Crowder",
+      "cargo": "Desarrollador frontend",
+      "inicio": "06-01-2019",
+      "fin": "actual",
+      "area": "Eventos"
+    }
+  ],
+  "habilidades": {
+    "lenguajes": ["JAVA", "Javascript", "C"],
+    "frameworks": ["react", "Angular", "Srping", "Next.js", "Ionic"],
+    "otros": [
+      "SQL",
+      "git",
+      "HTML",
+      "CSS",
+      "SASS",
+      "GULP",
+      "Integración continua",
+      "Metodologías ágiles",
+      "Jenkins"
+    ]
+  },
+  "hobbies": ["fútbol", "básquet", "música"]
 }
 ```
