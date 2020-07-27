@@ -22,3 +22,9 @@ export default {
   data: () => ({ drawer: null }),
 };
 </script>
+
+<style scoped>
+#inspire {
+  background: #fafafa;
+}
+</style>
