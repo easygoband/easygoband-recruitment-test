@@ -1,0 +1,23 @@
+{
+    "Nombre": "Aarón",
+    "Apellidos": "Bellés Beltrán",
+    "Nacimiento":"21-02-1993",
+    "Email":"aaronbellesbeltran@gmail.com",
+    "Dirección": {
+        "Calle": "Cid Campeador 11",
+        "Población": "Cabanes",
+        "Código Postal": "12180"
+    },
+    "Teléfono": [
+               { "type": "Casa", "Número": "964657082" },
+               { "type": "Móvil", "Número": "617221032" }
+    ],
+    "Estudios":"Realicé el grado medio de Microinformática y redes en el instituto IES ALFONS XIII de Vall d´Alba(Prácticas en Media MArkt), despúes estudié para las pruebas de acceso al grado superior de DAM en AudioGil, en segundo año de DAM me pasé a DAW en el instituto IES El Caminás(Prácticas en Envidea Multimedia como programador web).",
+    "Lenguajes":[
+       "En DAM empezamos con Java python y bases de datos (Estás con un nivel bajo ahora mismo",
+       "En DAW hemos visto HTML, CSS,Javascrypt en la parte frontend y PHP por la parte backend",
+"Por otra parte en después del curso y en las prácticas aprendí un poco de Vue, hicimos una web para tatuadores https://arthackers.ink con wordpress en PHP y un plugin https://github.com/AaronByes/PrintfulApiPlugin en el que conectamos con una API externa para hacer un formulario como https://www.latostadora.com/camisetas-personalizadas/.",
+"Herramientas: eclipse,Geany, Visual Studio, Photoshop y Wordpress"
+    ]
+    
+}
