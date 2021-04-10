@@ -1,0 +1,53 @@
+{
+	"Nombre": "Federico Jose",
+	"Apellido": "Dagotto",
+	"Edad":  25,
+	"Estudios": [
+	{
+		"carrera": "Licenciatura en Fisica",
+		"universidad": "Universidad Nacional de Cordoba",
+		"Pais": "Argentina"
+	},
+	{
+		"carrera": "Grado en Fisica",
+		"universidad": "Universidad de Valencia",
+		"Pais": "España"
+	}
+	],
+	
+	"Programacion": ["Kotlin","JavaScript", "NodeJS", "Python", "C++", "MATLAB", "Mathematica"],
+	"contacto": {
+			"correo": "dagotto.f@gmail.com",
+			"telefono": 633150675
+	}
+				
+			 
+}
+
+
+
+
+
+1) SOLID: Se ha tenido en cuenta el protocolo SOLID para la escritura de los códigos (back-end y front-end) en la medida de lo posible. He intentado mantener el código modulado,
+con funciones y clases reutilizables.
+2) He pasado varias horas pensando en test de validaciones dentro del código y en la sección propia de los test, pero la gran mayoría de test estan implementados dentro del
+codigo.
+3) Dado a que Kotlin y Android Studio te suministran una sección de dedicada a testeo dentro del archivo fuente, el lenguaje utilizado fue Kotlin, y se han usado librerias
+de Google (Google Truth).
+4) Se han utilizado 2 APIs, la del back-end y la dispuesta en GitHub. Se podría modular las API para poder filtrar no solo por ID sino por cualquier elemento de la clase, 
+mostrando en caso de ocurrencia, elementos repetidos listados y ordenados por alguna subclase. 
+5) Si accedemos a la API mediante Postman, en la sección de Headers se puede ver que x-powered-by: Express, por lo tanto esta API esta desarrollada con Express y JavaScript.
+6) La API acepta peticiones CORS, ya que si accedemos a ella mediante Postman, y accedemos a la sección de Headers, se puede observar que access-control-allow-origin*, donde
+el asterisco indica que acepta peticiones CORS.
+7) La API utilizada está alojada en servidores de Amazon, probablemente se haya optado por alojarla en Amazon por la necesidad de un buen flujo de tráfico.  
+8) Se podría medir el tiempo de ejecución de cada sección del código, para dados inputs. Realizar esta medida la cantidad de veces necesaria para generar un estudio estadístico.
+Luego, determinar que parte del código es el más demandante y verificar si se puede optimizar. He realizado estudios semejantes para inferencia de parámetros en la utilización
+de inteligencia artificial (librerías SK-learn - Python) para el realizado de clustering.
+
+
+Nota: Entrego dos archivos de Kotlin, uno realizado sin el back-end, el cual se comunica con la API directamente. Por otro lado, entrego también otro archivo distinto al primero,
+el cual está adaptado para usar el back-end desarrollado. He testeado el back-end con Postman, y da buenos resultados, el problema reside en que cuando llamo al servidor 
+localhost desde el emulador de android, este no responde. He buscado posibles soluciones, cambiando la url de http://10.0.2.2:3000/ por mi http://IP:3000/ o configurando el proxy
+desde dentro del emulador, pero todas, lamentablemente, sin éxito. 
+
+

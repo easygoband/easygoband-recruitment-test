@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Easygoband2</string>
+
+
+    <string name="userdata">Name: %1$s
+        \n ID: %2$d
+        \n Access Group Name: %3$s
+        \n Access Group ID: %4$d
+        \n Total Uses: %5$d
+        \n Session Name: %6$s
+        \n Session ID: %7$d
+        \n Event ID: %8$d
+        \n Structure Decode status: %9$s
+        \n Basic Product ID: %10$d
+    </string>
+
+    <string name="userNotFound">
+        ERROR, USER NOT FOUND
+    </string>
+
+</resources>
