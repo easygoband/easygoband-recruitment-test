@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">EasyGOBand</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="fragment_selection_title">Choose which server are you going to use.</string>
+    <string name="input_id_fragment">Input ID Fragment</string>
+    <string name="list_fragment">List Fragment</string>
+    <string name="detail_fragment">Detail Fragment</string>
+    <string name="input_request_message">Introduce the ID.</string>
+    <string name="irm_field">Numeric value</string>
+    <string name="server_selection">Select an option</string>
+    <string name="irm_value">ID</string>
+    <string name="input_id_error">ID not valid.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="local_server_frag">local_server_fragment</string>
+</resources>

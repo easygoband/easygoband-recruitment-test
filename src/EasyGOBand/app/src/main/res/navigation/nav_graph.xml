@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/SelectionFragment">
+    <fragment
+        android:id="@+id/SelectionFragment"
+        android:name="com.riac.easygoband.ui.fragments.SelectionFragment"
+        android:label="@string/input_id_fragment"
+        tools:layout="@layout/fragment_selection">
+        <action
+            android:id="@+id/from_selection_to_provided_server_options"
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/from_selection_to_local_server"
+            app:destination="@id/LocalServerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/LocalServerFragment"
+        android:name="com.riac.easygoband.ui.fragments.LocalServerFragment"
+        android:label="@string/input_id_fragment"
+        tools:layout="@layout/fragment_local_server">
+        <action
+            android:id="@+id/from_ls_to_list"
+            app:destination="@id/SecondFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.riac.easygoband.ui.fragments.FirstFragment"
+        android:label="@string/input_id_fragment"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/from_id_to_list"
+            app:destination="@id/SecondFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.riac.easygoband.ui.fragments.SecondFragment"
+        android:label="@string/list_fragment"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/from_list_to_detail"
+            app:destination="@id/third_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/third_fragment"
+        android:name="com.riac.easygoband.ui.fragments.ThirdFragment"
+        android:label="@string/detail_fragment"
+        tools:layout="@layout/fragment_third">
+
+        <argument
+            android:name="item"
+            app:argType="com.riac.easygoband.models.APIResponseItem"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+</navigation>
