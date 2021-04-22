@@ -52,6 +52,8 @@ Esta decisión puede haber sido tomada por diversos factores, entre ellos está
 
 Cómo rastrearías un problema de rendimiento en producción? ¿Alguna vez has tenido que hacerlo?
 
+Nunca he tenido que rastrear un problema de rendimiento en producción, pero mi actuación sería preguntarle al usuario/usuarios que han tenido ese problema de rendimiento, cuales han sido sus acciones previas y en que momento lo han detectado. A continuación, les recomendaría que liberasen la memoria del dispositivo reiniciando la aplicación y yo haría lo mismo que han hecho ellos y vería si ha habido un exceso de uso de memoria y en que punto, intentaría reducir el uso de memoria cargando menos información en la RAM y haria cambios en el código para que eso no volviese a pasar.
+
 
 
 Descríbete a ti mismo usando JSON.
