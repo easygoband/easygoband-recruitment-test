@@ -67,4 +67,4 @@
 
 -   Datos sobre la app que considero relevantes:
     -   La app se ha desarrollado sobre con "minSdkVersion 19", ya que según tengo entendido es lo más habitual para apps comerciales y unas lineas de diseño muy simples, dado que he preferido dar prioridad a la funcionalidad.
-    -   El backend se ha desarrollado con nodeJS y Express, en caso de una app comercial tendría más funciones, pero en este caso se limita a hacer un filtrado de datos de la API que me facilitasteis. He decidido ejecutarlo en heroku para poder realizar pruebas con mi teléfono, una vez hayais tenido la oportunidad de probar la app lo desactivaré.
+    -   El backend se ha desarrollado con nodeJS y Express, en caso de una app comercial tendría más funciones, pero en este caso se limita a hacer un filtrado de datos de la API que me facilitasteis. He decidido ejecutarlo en heroku para poder realizar pruebas con mi teléfono, lo he dejado desactivado, pero si queréis que lo active para poder probar la app poneos en contacto conmigo y lo activare lo antes posible, lo desactiva permanentemente una vez se haya completado la prueba.
