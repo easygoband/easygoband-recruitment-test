@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--TEXTS-->
+    <dimen name="textSizeXXL">28sp</dimen>
+    <dimen name="textSizeXL">16sp</dimen>a
+    <dimen name="textSizeL">14sp</dimen>
+    <dimen name="textSizeM">13sp</dimen>
+    <dimen name="textSizeS">12sp</dimen>
+
+
+    <!--MARGINS-->
+    <dimen name="marginXS">4dp</dimen>
+    <dimen name="marginS">8dp</dimen>
+    <dimen name="marginM">14dp</dimen>
+    <dimen name="marginL">18dp</dimen>
+    <dimen name="marginXL">24dp</dimen>
+    <dimen name="marginXXL">32dp</dimen>
+</resources>
