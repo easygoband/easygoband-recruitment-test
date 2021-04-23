@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Easygoband TEST</string>
+    <string name="introduce_id">Introduce ID del evento</string>
+    <string name="ayuda_inicio">Rellena campo ID antes de realizar la búsqueda.</string>
+    <string name="buscar_Btn">Buscar</string>
+    <string name="volver_Btn">Volver</string>
+    <string name="evento_seleccionado_ID">Evento ID %1$s</string>
+    <string name="resultados_evento">%1$d resultados</string>
+    <string name="error_404_1">No hay nada por aquí…</string>
+    <string name="error_404_2">El evento \"%1$s\" parece que no existe.\n Prueba con otra ID</string>
+    <string name="error_401">No puedes acceder aquí :(</string>
+    <string name="onFailed_peticion_1">Algo ha fallado...</string>
+    <string name="onFailed_peticion_2">Comprueba tu conexión a Internet.</string>
+    <string name="datos_filtrados">"Filtrados: %1$d elementos"</string>
+    <string name="item_lista_all_sess_name">"Session names: %1$s"</string>
+    <string name="sesiones_tittle">"Sesiones"</string>
+    <string name="sesision_name_list">"Session name"</string>
+    <string name="session_id_list">"Session ID"</string>
+    <string name="informacion_title">"Información"</string>
+    <string name="ID_txt">ID</string>
+    <string name="name_txt">Name</string>
+    <string name="access_group_name_txt">Access group name</string>
+    <string name="access_group_id_txt">Access group ID</string>
+    <string name="total_uses_txt">Total uses</string>
+    <string name="event_ID_txt">Event ID</string>
+    <string name="structure_decode_txt">Structure decode</string>
+    <string name="modified_txt">Modified</string>
+    <string name="basic_product_ID_txt">Basic product ID</string>
+
+</resources>
