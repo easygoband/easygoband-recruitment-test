@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowDetail" >
+
+    <TextView
+        android:id="@+id/DetailEventId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Title"
+        app:layout_constraintStart_toEndOf="@+id/Title"
+        app:layout_constraintTop_toTopOf="@+id/Title" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Show detail"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/AccesGroupIdTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Acces Group Id:"
+        app:layout_constraintStart_toStartOf="@+id/Title"
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+    <TextView
+        android:id="@+id/DetailAccesGroupId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/AccesGroupIdTitle"
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+    <TextView
+        android:id="@+id/AccessGroupNametTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Access Group Namet Title:"
+        app:layout_constraintStart_toStartOf="@+id/AccesGroupIdTitle"
+        app:layout_constraintTop_toBottomOf="@+id/AccesGroupIdTitle" />
+
+    <TextView
+        android:id="@+id/DetailAccessGroupNamet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@+id/AccessGroupNametTitle"
+        app:layout_constraintTop_toTopOf="@+id/AccessGroupNametTitle" />
+
+    <TextView
+        android:id="@+id/TotalUses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Total Uses:"
+        app:layout_constraintStart_toStartOf="@+id/AccessGroupNametTitle"
+        app:layout_constraintTop_toBottomOf="@+id/AccessGroupNametTitle" />
+
+    <TextView
+        android:id="@+id/DetailTotalUses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@+id/TotalUses"
+        app:layout_constraintTop_toTopOf="@+id/TotalUses" />
+
+    <TextView
+        android:id="@+id/StructureDecodeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Structure Decode:"
+        app:layout_constraintStart_toStartOf="@+id/TotalUses"
+        app:layout_constraintTop_toBottomOf="@+id/TotalUses" />
+
+    <TextView
+        android:id="@+id/DetailStructureDecode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@+id/StructureDecodeTitle"
+        app:layout_constraintTop_toTopOf="@+id/StructureDecodeTitle" />
+
+    <TextView
+        android:id="@+id/NameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="@+id/StructureDecodeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/StructureDecodeTitle" />
+
+    <TextView
+        android:id="@+id/DetailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@+id/NameTitle"
+        app:layout_constraintTop_toTopOf="@+id/NameTitle" />
+
+    <TextView
+        android:id="@+id/ModifiedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Modified"
+        app:layout_constraintStart_toStartOf="@+id/NameTitle"
+        app:layout_constraintTop_toBottomOf="@+id/NameTitle" />
+
+    <TextView
+        android:id="@+id/DetailModified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ModifiedTitle"
+        app:layout_constraintTop_toTopOf="@+id/ModifiedTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
