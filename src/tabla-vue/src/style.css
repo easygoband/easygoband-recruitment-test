@@ -1,0 +1,132 @@
+/* Funete de letra que se usara de google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+body {
+    font-family: 'Oxygen', sans-serif;
+    margin: 0;
+    background-color: #d3e8f8;
+}
+
+.container {
+    display: flex;
+    text-align: left;
+    min-width: 350px;
+    flex-direction: column;
+    margin: 5vw;
+}
+
+.search-group {
+    margin-bottom: 10px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
+}
+
+.search-input {
+    height: 25px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    padding: 0 10px 0 10px;
+
+    transition: all 200ms ease-in-out;
+}
+
+.search-btn {
+    background-color: #000230;
+    height: 25px;
+    width: 50PX;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+    transition: box-shadow 200ms ease-in-out;
+    transition: background-color 150ms ease-in-out;
+}
+
+.search-btn:hover {
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
+}
+
+.search-btn:active {
+    background-color: #8f90b4;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
+}
+
+
+thead {
+    background-color: #000230;
+    color: white;
+}
+
+tbody {
+    background-color: white;
+}
+
+tr {
+    border-bottom: 2px solid black;
+}
+
+/* Estilo que se aplica a la ultima fila de la tabla para que no tenga el borde abajo */
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+th, td {
+    padding: 1em;
+}
+
+th {
+    cursor: pointer;
+    white-space: nowrap;
+    vertical-align: bottom;
+
+    /* Evitar seleecionar el texto al clicar par aordenar */
+    user-select: none;
+}
+.sort-icon{
+    margin-left: 10px;
+    pointer-events: none;
+}
+
+
+
+@media (max-width: 500px) {
+    .container {
+        align-items: flex-start;
+        margin-left: 50px;
+    }
+}
+
+.empty-message{
+    background-color: #afafaf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 80%;
+    border-radius: 20px;
+    padding: 10px 5px;
+
+    animation: fadein 1s;
+}
+
+/* animación para hacer menos brusca la aparición del mennsaje de ningún resultado */
+@keyframes fadein {
+    0% { opacity: 0;
+    transform: translateY(-50px); }
+    50%   { opacity: 1;
+        transform: translateY(5px); }
+    100%{
+
+    }
+}
