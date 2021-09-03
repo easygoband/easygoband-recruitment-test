@@ -1,17 +1,36 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <img src="./assets/Easygoband.png">
+    
+    <contenido/>
+    
   </div>
 </template>
-
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 <script>
-import HelloWorld from './components/HelloWorld'
+import contenido from './components/HelloWorld'
+import vuetify  from './components/vuetify.js'
+
+
+
+
+
+
+
 
 export default {
   name: 'App',
+  "vuetify": vuetify,
   components: {
-    HelloWorld
+    contenido,
+    
+    
+    
+    
+    
+    
+
   }
 }
 </script>
@@ -22,7 +41,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #030640;
   margin-top: 60px;
+  
+
 }
+image{
+  
+}
+
+
 </style>
