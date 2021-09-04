@@ -16,7 +16,7 @@ The application will retrieve an Excel file with those items that match the type
 
 ## Filter results by some fields
 
-The application will retrieve an Excel file with those items that match the filtering criteria. To run it, the following example must be followed:
+The application will retrieve an Excel file with those items that match one of selected filtering criteria. To run it, the following example must be followed:
 
 ```
 <program> filterBy access_group_name=Abono
