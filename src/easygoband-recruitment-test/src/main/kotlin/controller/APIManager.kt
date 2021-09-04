@@ -119,61 +119,50 @@ class APIManager(val executionArguments: Array<String>) {
         // Checks the entire set of data
         for (access in data) {
             // Sets the default value
-            found = true
+            found = false
 
             // Checks every other execution argument
-            for (i in 2 until executionArguments.size) {
-                // If, currently, the filter criteria matches...
-                if (found) {
-                    // Splits the filter criteria into a key-value pair
-                    var filterCriteria: Array<String> = getFilterCriteria(executionArguments[i])
+            for (i in 1 until executionArguments.size) {
+                // Splits the filter criteria into a key-value pair
+                var filterCriteria: Array<String> = getFilterCriteria(executionArguments[i])
 
-                    // If there is a key and a value...
-                    if (filterCriteria.size >= 2) {
-                        // Checks the filter criteria key
-                        if (filterCriteria[0].equals("access_group_name", ignoreCase = true)) {
-                            if (!access.accessGroupName.contains(filterCriteria[1], ignoreCase = true))
-                                found = false
-                        } else if (filterCriteria[0].equals("access_group_id", ignoreCase = true)) {
-                            if (!access.accessGroupID.toString().equals(filterCriteria[1]))
-                                found = false
-                        } else if (filterCriteria[0].equals("total_uses", ignoreCase = true)) {
-                            if (!access.totalUses.toString().equals(filterCriteria[1]))
-                                found = false
-                        } else if (filterCriteria[0].equals("event_id", ignoreCase = true)) {
-                            if (!access.eventID.toString().equals(filterCriteria[1]))
-                                found = false
-                        } else if (filterCriteria[0].equals("stucture_decode", ignoreCase = true)) {
-                            if (!access.structureDecode.toString().equals(filterCriteria[1]))
-                                found = false
-                        } else if (filterCriteria[0].equals("name", ignoreCase = true)) {
-                            var subFound: Boolean = false
+                // If there is a key and a value...
+                if (filterCriteria.size >= 2) {
+                    // Checks the filter criteria key
+                    if (filterCriteria[0].equals("access_group_name", ignoreCase = true)) {
+                        if (access.accessGroupName.contains(filterCriteria[1], ignoreCase = true))
+                            found = true
+                    } else if (filterCriteria[0].equals("access_group_id", ignoreCase = true)) {
+                        if (access.accessGroupID.toString().equals(filterCriteria[1]))
+                            found = true
+                    } else if (filterCriteria[0].equals("total_uses", ignoreCase = true)) {
+                        if (access.totalUses.toString().equals(filterCriteria[1]))
+                            found = true
+                    } else if (filterCriteria[0].equals("event_id", ignoreCase = true)) {
+                        if (access.eventID.toString().equals(filterCriteria[1]))
+                            found = true
+                    } else if (filterCriteria[0].equals("structure_decode", ignoreCase = true)) {
+                        if (access.structureDecode.toString().equals(filterCriteria[1]))
+                            found = true
+                    } else if (filterCriteria[0].equals("name", ignoreCase = true)) {
+                        if (access.name.contains(filterCriteria[1], ignoreCase = true))
+                            found = true
 
-                            if (access.name.contains(filterCriteria[1], ignoreCase = true))
-                                subFound = true
+                        for (session in access.sessions)
+                            if (session.name.contains(filterCriteria[1], ignoreCase = true))
+                                found = true
+                    } else if (filterCriteria[0].equals("id", ignoreCase = true)) {
+                        if (access.id.toString().equals(filterCriteria[1], ignoreCase = true))
+                            found = true
 
-                            for (session in access.sessions)
-                                if (session.name.contains(filterCriteria[1], ignoreCase = true))
-                                    subFound = true
-
-                            found = subFound
-                        } else if (filterCriteria[0].equals("id", ignoreCase = true)) {
-                            var subFound: Boolean = false
-
-                            if (access.id.toString().equals(filterCriteria[1], ignoreCase = true))
-                                subFound = true
-
-                            for (session in access.sessions)
-                                if (session.id.toString().equals(filterCriteria[1], ignoreCase = true))
-                                    subFound = true
-
-                            found = subFound
-                        } else if (filterCriteria[0].equals("basic_product_id", ignoreCase = true)) {
-                            if (!access.basicProductID.toString().equals(filterCriteria[1]))
-                                found = false
-                        } else {
-                            found = false
-                        }
+                        for (session in access.sessions)
+                            if (session.id.toString().equals(filterCriteria[1], ignoreCase = true))
+                                found = true
+                    } else if (filterCriteria[0].equals("basic_product_id", ignoreCase = true)) {
+                        if (access.basicProductID.toString().equals(filterCriteria[1]))
+                            found = true
+                    } else {
+                        found = false
                     }
                 }
             }
