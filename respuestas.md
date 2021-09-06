@@ -47,7 +47,7 @@ errores en funcionalidades implementadas recientemente se podría localizar el p
 ```json
 {
 	"Nombre": "Pedro",
-	"Apellidos": "Giménez Aldeguer"
+	"Apellidos": "Giménez Aldeguer",
 	"Fecha de nacimiento": "05/07/1998",
 	"Provincia": "Alicante",
 	"País": "España",
@@ -61,7 +61,7 @@ errores en funcionalidades implementadas recientemente se podría localizar el p
 	[
 		{
 		"Institución" :"CICE Escuela Profesional de Nuevas Tecnologías",
-		"Estudio": "Máster en Desarrollo de Videojuegos con Unity"
+		"Estudio": "Máster en Desarrollo de Videojuegos con Unity",
 		"Ciudad" : "Madrid",
 		},
 		{
