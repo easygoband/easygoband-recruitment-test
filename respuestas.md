@@ -46,11 +46,11 @@ errores en funcionalidades implementadas recientemente se podría localizar el p
 ### Descríbete a ti mismo usando JSON.
 ```json
 {
-    "Nombre": "Pedro",
+	"Nombre": "Pedro",
 	"Apellidos": "Giménez Aldeguer"
-    "Fecha de nacimiento": "05/07/1998",
-    "Provincia": "Alicante",
-    "País": "España",
+	"Fecha de nacimiento": "05/07/1998",
+	"Provincia": "Alicante",
+	"País": "España",
 	"Correo": "pedrogial@gmail.com",
 	"Descripción": "Soy una persona con mucha motivación a la hora de afrontar los diferentes obstáculos 
 	que se me presentan en el día a día. Dispuesto a trabajar para poner en práctica todos mis conocimientos 
@@ -60,35 +60,35 @@ errores en funcionalidades implementadas recientemente se podría localizar el p
 	"Estudios": 
 	[
 		{
-            "Institución" :"CICE Escuela Profesional de Nuevas Tecnologías",
-			"Estudio": "Máster en Desarrollo de Videojuegos con Unity"
-            "Ciudad" : "Madrid",
-        },
-        {
-            "Institución" :"Universidad de Alicante",
-			"Estudio": "Grado en Ingenieria Informática especializado en Software",
-            "Ciudad" : "Alicante",
-        }
-    ],
+		"Institución" :"CICE Escuela Profesional de Nuevas Tecnologías",
+		"Estudio": "Máster en Desarrollo de Videojuegos con Unity"
+		"Ciudad" : "Madrid",
+		},
+		{
+		"Institución" :"Universidad de Alicante",
+		"Estudio": "Grado en Ingenieria Informática especializado en Software",
+		"Ciudad" : "Alicante",
+		}
+	],
 	"Experiencia": 
 	[
-        {
-            "Empresa" : "SWISS4WARD EUROPE S.L.",
-            "Proyecto" : "Creación de una página web mediante un CMS (Gestor de Contenidos)",
-            "Tecnologías" : ["JavaScript", "Node.js", "ApostropheCMS", "MongoDB", "CSS", "HTML"],
-            "Tareas" : "Desarrollador tanto del backend como del frontend de la página web",
-        }
-    ],
-    "Hobbies":
-    [
-        "Tecnología",
-		"Videojuegos",
-        "Series",
-        "Cine",
-        "Viajar",
-		"Música",
-		"Deporte"
-    ],
+		{
+	    	"Empresa" : "SWISS4WARD EUROPE S.L.",
+	    	"Proyecto" : "Creación de una página web mediante un CMS (Gestor de Contenidos)",
+	    	"Tecnologías" : ["JavaScript", "Node.js", "ApostropheCMS", "MongoDB", "CSS", "HTML"],
+	    	"Tareas" : "Desarrollador tanto del backend como del frontend de la página web",
+		}
+	],
+	"Hobbies":
+	[
+	"Tecnología",
+	"Videojuegos",
+	"Series",
+	"Cine",
+	"Viajar",
+	"Música",
+	"Deporte"
+	],
 }
 ```
 
