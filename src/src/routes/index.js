@@ -36,7 +36,9 @@ router.get('/items', (req,res) => {
             if(sorted_by!=null){
                 functions.sort(data,sorted_by);
             }
-            res.json(data.slice(offset,limit));
+            if(offset<=0){res.json(data.slice(0,limit));}
+            else{res.json(data.slice(offset-1,limit));}
+            
         }   
     })
     .catch(err => console.log(err))
