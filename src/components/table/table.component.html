@@ -1,0 +1,22 @@
+<!-- HTML DEL COMPONENTE TABLA -->
+<div class="table-responsive">
+    <table class="table table-hover table-bordered" id="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Modified</th>
+                <th>Session Name</th>
+            </tr>
+        </thead>
+
+        <tbody class="data">
+            <tr v-for="(item, index) in data" :key="index">
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.modified | moment }}</td>
+                <td>{{ item.sessions[0].name }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

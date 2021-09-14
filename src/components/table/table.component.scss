@@ -1,0 +1,32 @@
+// SCSS DEL COMPONENTE TABLA
+
+.dataTables_wrapper {
+  width: 92%;
+  margin: auto;
+
+  .row {
+    margin: 1rem auto;
+    width: 100%;
+
+    label {
+      display: inline-flex;
+      font-weight: bold;
+
+      select {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+thead {
+  cursor: pointer;
+  background-color: hsla(210, 100%, 39%, 0.7);
+}
+
+.pagination {
+  .page-item.active .page-link {
+    background-color: hsla(210, 100%, 39%, 0.7);
+    border-color: #dee2e6;
+  }
+}
