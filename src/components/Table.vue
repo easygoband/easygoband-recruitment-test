@@ -12,20 +12,22 @@
     </thead>
     <tbody>
       <tr
-        v-for="a in assets"
-        :key="a.id"
+        v-for="(a, index) in assets"
+        :key="index"
         class="border-b border-gray-200 hover:bg-gray-100 hover:bg-orange-100"
       >
         <td>#{{ a.id }}</td>
-        <td>#{{ a.name }}</td>
-        <td>#{{ a.access_group_name }}</td>
-        <td>#{{ a.modified }}</td>
+        <td>{{ a.name }}</td>
+        <td>{{ a.access_group_name }}</td>
+        <td>{{ getUpdateDate(a.modified) }}</td>
       </tr>
     </tbody>
   </table>
 </template>
 
 <script>
+import moment from "moment";
+
 export default {
   name: "Table",
 
@@ -33,6 +35,11 @@ export default {
     assets: {
       type: Array,
       default: () => [],
+    },
+  },
+  methods: {
+    getUpdateDate: function(date) {
+      return moment(date, "YYYY-MM-DD").format("DD/MM/YYYY");
     },
   },
 };
