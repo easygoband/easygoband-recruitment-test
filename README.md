@@ -1,5 +1,11 @@
 # :computer: Prueba Easygoband
 
+## :hammer_and_wrench: Deploy 
+
+The project is deployed in:
+
+➡️[Test Easygoband](https://test-easygoband.netlify.app/"Test Easygoband") ⬅️
+
 ## :open_file_folder: How to use
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
