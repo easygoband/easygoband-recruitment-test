@@ -4,7 +4,7 @@
 
 The project is deployed in:
 
-➡️[Test Easygoband](https://test-easygoband.netlify.app/"Test Easygoband") ⬅️
+➡️[Test Easygoband](https://test-easygoband.netlify.app/) ⬅️
 
 ## :open_file_folder: How to use
 
