@@ -46,10 +46,10 @@ He usado Lighthouse para generar reportes de rendimiento en produccion, pero ya 
         "name": "Diego A Cruz Triana",
         "profession": "Web Developer",
         "fecha_de_nacimiento": "30-04-92",
-         "web": "https://joanvicens.github.io/"
+         "web": "https://abejacruz.github.io/curriculumvitae/"
          "Correo": "dacruzt@outlook.com",
         "bio": "Ingeniero de sistemas, Amante de los videjuegos y del constante aprendizaje.",
-        "address": "Colombia, Colombia.",
+        "address": "Bogotá, Colombia.",
         "social": [{
 
                 "name": "facebook",
