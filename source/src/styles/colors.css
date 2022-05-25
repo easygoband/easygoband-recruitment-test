@@ -1,0 +1,18 @@
+:root {
+    --primary-green-bg: #0c9;
+    --secondary-green-bg: #009973;
+    --primary-blue-bg: #09c;
+    --secondary-blue-bg: #99e6ff;
+    --light-blue-bg: #e6f9ff;
+
+    --primary-green-fg: #009973;
+    --secondary-green-fg: #e6fff9;
+    --primary-blue-fg: #e6f9ff;
+
+    --main-bg: whitesmoke;
+    --primary-black-bg: #222;
+    --secondary-black-bg: #000;
+
+    --primary-gray-fg: #444;
+    --secondary-gray-fg: #aaa;
+}

@@ -1,0 +1,27 @@
+{
+    "candidate" : {
+       "name" : "Jose Salvador",
+        "age" : "27",
+        "country" : "Mexico",
+        "description" : "I've been programing for 7 years, 2 years ago I began to focus on web development",
+        "technologies" : {
+            "javascript" : {
+                "experience_years" : "2"
+            },
+            "vue" : {
+                "experience_years" : "1.5"
+            },
+            "css" : {
+                "experience_years" : "2"
+            },
+            "html" : {
+                "experience_years" : "2"
+            },
+            "python" : {
+                "experience_years" : "1"
+            }
+        },
+        "skills" : ["proactive", "autodidact", "diligent", "punctuality", "responsible"],
+        "hobbies" : ["drawing", "walking", "videogames"]
+    }
+}
