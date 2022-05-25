@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
-        <load-spinner v-if="loading === true" />
-        <data-table v-if="dataIsReady" :tableDatas="tdata" :tableFilters="tfilters"/>
+        <load-spinner v-if="loading" />
+        <data-table v-if="!loading" :tableDatas="tdata" :tableFilters="tfilters"/>
     </div>
 </template>
 
@@ -32,7 +32,7 @@ export default {
             this.loading = true;
             getData(process.env.VUE_APP_API_URL, process.env.VUE_APP_API_AUTH_KEY)
             .then(result => result.json()).then(datas => {
-                // Get the data and choose which columns to display
+                // Choose which columns to display
                 this.tdata = mapData(datas, td => {
                     return {
                         id: td.id,
@@ -54,11 +54,6 @@ export default {
             }).finally(() => this.loading = false);
         },
     },
-    computed: {
-        dataIsReady() {
-            return Object.keys(this.tdata).length;
-        },
-    }
 }
 </script>
 

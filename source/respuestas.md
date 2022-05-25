@@ -11,6 +11,7 @@
 *Escribir y correr JavaScript es sencillo, solo requiero un navegador o Node*
 
 - ¿Cómo mejorarías la API que has usado?
+
 *Ordenaria un poco mas los datos*
 
 - ¿Qué framework y lenguaje crees que se ha usado para exponer esta API REST? Consejo: En el protocolo HTTP viaja mucha información

@@ -1,3 +1,9 @@
+/**
+ * Returns a new object of objects with properties specified in callback
+ * @param { object } source
+ * @param { function } callback
+ * @returns { object }
+ * */
 function mapData(source, callback) {
     let newData = [];
     for(const item in source) {
@@ -6,7 +12,12 @@ function mapData(source, callback) {
     }
     return Object.assign({}, [...newData]);
 }
-
+/**
+ * Returns a new Object of arrays with keys specified in callback
+ * @param { array } options
+ * @param { function } callback
+ * @returns { object }
+ * */
 function mapFilters(options, callback) {
       let newData = {};
       for(const key in callback(options[0])) {
@@ -25,7 +36,11 @@ function mapFilters(options, callback) {
       }
     return newData;
 }
-
+/**
+ * Returns a number equal of count of filters properties are not false
+ * @param { object } filters
+ * @returns { number }
+ * */
 function filtersFill(filters) {
     let status = 0;
     Object.values(filters).forEach(filter => {
